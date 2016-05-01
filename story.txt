@@ -1,0 +1,31 @@
+Email Address:   
+1. Email length be between 5 and 80 characters
+2. Email should contain a single @ symbol and the email should not start or end with the @ symbol. 
+3. Email should contain a period and it should come after the @ symbol. The email should not end in a period. 
+4. At least one alpha/numeric character is between the “@” symbol and the period (no validation of the top level domain should be performed) 
+5. E-Mail Address does not contain: ( ) < > [ ] : ; , “ / \ % space ! # $ % ^ & * + = ? {} ` ~ 
+
+
+Phone: 
+1.  Phone must be between 1 and 20 characters
+2.  Accept dashes and spaces but trims away after page submission
+
+
+DL Number:
+1.  DL # should be between 1 and 25 characters. 
+2. Driver’s License Number cannot contain special characters (includes all symbols and non-standard ASCII alpha characters). EXCEPTION, dashes, spaces and slashes will be removed upon page submssion.
+
+
+Address Line 1:
+1.  Address Line 1 should be between 1 and 30 characters.
+2. Cannot have special characters such as symbols and non-standard ASCII alpha characters; EXCEPTIONS: space, (-) hyphen, apostrophe, period, (#) pound symbol,  star symbol, (&) ampersand, (\) back-slash, ‘( )’ parentheses.
+
+City:
+1.  City should be between 1 and 20 characters
+2. Cannot have special characters (includes symbols and non-standard ASCII alpha characters; EXCEPTIONS: space, (-) hyphen, apostrophe, period, (#) pound symbol,  star symbol, (&) ampersand, (\) back-slash, ‘( )’ parentheses).
+
+Zip/Postal Code:
+1.  Zip should be between 1 and 11 characters.
+
+If any of the above rules are not followed the error message should, "##FORM FIELD NAME## is not valid".
+##FORM FIELD NAME## should be dynamic based on what form field has invalid data.  

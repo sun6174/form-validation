@@ -1,0 +1,21 @@
+#form1{
+    
+    border-style: inset;
+    border-width: 0px;
+    width:600px;
+}
+.label{
+    width:150px;
+    float:left;
+    text-align: right;
+    border-style: inset;
+    border-width:0px;
+    padding:2px;
+}
+.fieldBox{
+    width:430px;
+    float:left;
+    border-style: inset;
+    border-width:0px;
+    padding:2px;
+}
