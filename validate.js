@@ -1,7 +1,6 @@
-var TA = {
-
+var formValidator = {
 	// Initializing the function for form 
-	formValidator: function(form, fields) {
+	init: function(form, fields) {
 		var that =  this;
 		form.onsubmit = function() {
 			if(!that.validateAll(form, fields)) {
@@ -10,11 +9,12 @@ var TA = {
 				return false;
 			}
 			else {
-				alert('form filled successfully');
+				alert('Form filled completely');
 			}
 		};
 	},
-	// Reset the errrors to empty
+
+	// Reset the errors to empty
 	reset: function() {
 		this.errors = [];
 	},
@@ -23,6 +23,7 @@ var TA = {
 	getElementByName: function(field) {
 		return document.getElementsByName(field.name)[0];
 	},
+
 	// Validate function where all the validations get checked
 	validateAll: function(form, fields) {
 		var error = 0;
@@ -234,4 +235,4 @@ var regex = {
 	address : /^[a-zA-Z0-9\s,'-]*$/,
 	city: /^(?:[a-zA-Z]+(?:[.'\-,])?\s?)+$/,
 	zip: /^([a-zA-Z0-9_-]){1,11}$/
-}
+};

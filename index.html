@@ -1,82 +1,81 @@
-<html>
-    
+<!DOCTYPE html>
+<html>    
 <head>
-    <title>validation</title>
-    <link href="style.css" type="text/css" rel="stylesheet"/>
+  <title>Form Validation</title>
+  <link href="style.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-    <form id="myForm" action="thanks.html" method="get">
-        <p id="validationErrors"></p>
-        <div id="form1">
-            <div class="label">Email Address :</div>
-            <div class="fieldBox">
-                <input type="text" name="email" id="email" data-require = "true">
-            </div>
-            <div class="label">Phone :</div>
-            <div class="fieldBox">
-                <input type="text" name="phone" id="phone" data-require = "true">
-            </div>
-            <div class="label">Driving License :</div>
-            <div class="fieldBox">
-                <input type="text" name="dl" id="dl" data-require = "true">
-            </div>
-            <div class="label">Address Line 1:</div>
-            <div class="fieldBox">
-                <textarea rows="4" cols="30" id="address" name="address" data-require = "true"></textarea>
-            </div>
-            <div class="label">City:</div>
-            <div class="fieldBox">
-                <input type="text" name="city" id="city" data-require = "true">
-            </div>
+<form id="myForm" action="thanks.html" method="get">
+	<p id="validationErrors"></p>
+	<div id="form1">
+		<div class="label">Email Address :</div>
+		<div class="fieldBox">
+			<input type="text" name="email" id="email" data-require = "true">
+		</div>
+		<div class="label">Phone :</div>
+		<div class="fieldBox">
+			<input type="text" name="phone" id="phone" data-require = "true">
+		</div>
+		<div class="label">Driving License :</div>
+		<div class="fieldBox">
+			<input type="text" name="dl" id="dl" data-require = "true">
+		</div>
+		<div class="label">Address Line 1:</div>
+		<div class="fieldBox">
+			<textarea rows="4" cols="30" id="address" name="address" data-require = "true"></textarea>
+		</div>
+		<div class="label">City:</div>
+		<div class="fieldBox">
+			<input type="text" name="city" id="city" data-require = "true">
+		</div>
+		<div class="label">Zip/Postal Code :</div>
+		<div class="fieldBox">
+			<input type="text" name="zip" id="zip" data-require = "true">
+		</div>
+		<div class="fieldBox" style="text-align: center">
+			<input type="submit" value="Submit" id="submit">
+			<input type="reset" name="reset" id="reset" value="Cancel">
+		</div>
+  </div>
+</form>
 
-            <div class="label">Zip/Postal Code :</div>
-            <div class="fieldBox">
-                <input type="text" name="zip" id="zip" data-require = "true">
-            </div>
-            <div class="fieldBox" style="text-align: center">
-                <input type="submit" value="Submit" id="submit">
-                <input type="reset" name="reset" id="reset" value="Cancel">
-            </div>
-        </div>
-        
-    </form>
-    <script src="validate.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        var fields = [
-            {
-                email: true,
-                name: 'email',
-                range: [5,80]
-            },
-            {   
-                phone: true,
-                name: 'phone',
-                range: [1, 20],
-                trim: true
-            },
-            {
-                dl: true,
-                name: 'dl',
-                range:[1,25],
-                trim: false
-            },
-            {
-                address: true,
-                name: 'address',
-                range: [1,30]
-            },
-            {
-                city: true,
-                name: 'city',
-                range: [1,4]
-            },
-            {
-                zip: true,
-                name: 'zip',
-                range: [1,11]
-            }
-        ];
-        TA.formValidator(document.getElementById('myForm'), fields);
-    </script>
+<script src="validate.js" type="text/javascript"></script>
+<script type="text/javascript">
+	var fields = [
+		{
+			email: true,
+			name: 'email',
+			range: [5,80]
+		},
+		{   
+			phone: true,
+			name: 'phone',
+			range: [1, 20],
+			trim: true
+		},
+		{
+			dl: true,
+			name: 'dl',
+			range:[1,25],
+			trim: false
+		},
+		{
+			address: true,
+			name: 'address',
+			range: [1,30]
+		},
+		{
+			city: true,
+			name: 'city',
+			range: [1,4]
+		},
+		{
+			zip: true,
+			name: 'zip',
+			range: [1,11]
+		}
+	];
+	formValidator.init(document.getElementById('myForm'), fields);
+</script>
 </body>
 </html>
